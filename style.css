@@ -1,0 +1,123 @@
+:root {
+  --p-font-size: 16px;
+  --body-bg-color: hsl(225, 100%, 94%);
+  --annual-bg-color: hsl(225, 100%, 98%);
+  --confirm-bg-color: hsl(245, 75%, 52%);
+  --font-color: hsl(223, 47%, 23%);
+  --border-radius: 15px;
+}
+
+* {
+  margin: 0;
+  box-sizing: content-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--body-bg-color);
+  font-size: var(--p-font-size);
+}
+
+.pattern {
+  min-height: 100%;
+  min-width: 100%;
+  display: grid;
+  place-items: center;
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--border-radius);
+  background-color: white;
+  box-shadow: 5px 5px 5px 0px rgba(214,219,237,0.75);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(214,219,237,0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(214,219,237,0.75);
+}
+
+.image svg {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.lower-body {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  text-align: center;
+  gap: 1rem;
+  color: var(--font-color);
+}
+
+.lower-body span {
+  display: block;
+}
+
+.lower-body p {
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.annual-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--annual-bg-color);
+    border-radius: var(--border-radius);
+}
+
+.left-side {
+    display: flex;
+    gap: 1rem;
+}
+
+.left-side h2 {
+    font-size: var(--p-font-size);
+    font-weight: 900;
+}
+
+.lower-body button {
+    text-align: center;
+    border: none;
+    font-weight: 700;
+    padding: 1rem 0;
+    border-radius: var(--border-radius);
+}
+
+.lower-body button:hover {
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: var(--confirm-bg-color);
+    color: white;    
+}
+
+.cancel-btn {
+    background-color: white;
+    font-weight: 400;
+    opacity: 0.6;
+}
+
+.confirm-btn:hover{
+    background-color: rgb(134, 91, 234);
+    transition: all ease 0.2s;
+}
+.cancel-btn:hover{
+    opacity: 1;
+    transition: all ease 0.2s;
+}
+
+a:hover {
+    color: rgb(134, 91, 234);
+    transition: all ease 0.2s;
+}
